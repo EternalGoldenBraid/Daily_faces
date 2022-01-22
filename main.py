@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
+from deepface import DeepFace
 
 import time
 from datetime import datetime as dt
@@ -47,7 +48,6 @@ def main():
         return
     
     clf = cv2.CascadeClassifier('face_detector.xml')
-    #clf = cv2.CascadeClassifier('upperbody_detector.xml')
     is_shutdown = False
     itr = 0
     save_interval = 20
